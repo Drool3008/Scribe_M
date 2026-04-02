@@ -80,7 +80,7 @@ const LandingPage = () => {
         </Link>
 
         {/* Dashboard Card */}
-        <Link to="/dashboard" style={{textDecoration: 'none'}}>
+        <a href="https://drool3008.github.io/ScribeHealth_form/dashboard/" style={{textDecoration: 'none'}}>
           <div style={{
             background: '#fff',
             borderRadius: '16px',
@@ -123,7 +123,7 @@ const LandingPage = () => {
               Open Dashboard <span style={{marginLeft: '0.5rem'}}>→</span>
             </div>
           </div>
-        </Link>
+        </a>
       </div>
     </div>
   );

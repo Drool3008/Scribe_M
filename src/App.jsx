@@ -14,23 +14,6 @@ const defaultProjectData = {
 function App() {
   return (
     <BrowserRouter>
-      <header className="app-header">
-        <Link to="/" style={{textDecoration: 'none'}}>
-          <div className="header-logo">
-            <div style={{fontWeight: 'bold', fontSize: '18px', color: 'var(--primary)'}}>
-              INTERNATIONAL INSTITUTE OF INFORMATION TECHNOLOGY
-              <br />
-              <span style={{fontSize: '12px', fontWeight: '500', color: '#666'}}>H Y D E R A B A D</span>
-            </div>
-          </div>
-        </Link>
-        <nav className="header-nav">
-          <Link to="/">Home</Link>
-          <Link to="/dashboard">Dashboard</Link>
-          <Link to="/business-model">Business Model</Link>
-        </nav>
-      </header>
-      
       <main>
         <Routes>
           <Route path="/" element={<LandingPage />} />

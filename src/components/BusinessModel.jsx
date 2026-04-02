@@ -105,60 +105,6 @@ const BusinessModel = ({ projectData }) => {
         </div>
       </div>
 
-      {/* Model scenarios container */}
-      <div className="card" style={{margin: '1rem 0', maxWidth: '100%', padding: '1rem', display: 'flex', alignItems: 'center', gap: '1rem'}}>
-        <span style={{fontWeight: 'bold'}}>Model: </span>
-        <button 
-          className={`btn ${activeModelKey === 'target' ? 'btn-primary' : 'btn-outline'}`}
-          onClick={() => setActiveModelKey('target')}
-          style={{padding: '0.5rem 1rem'}}
-        >
-          {isBaseLocked ? '🔒 Business Model' : 'Business Model'}
-        </button>
-        
-        {models['best'] && (
-           <button 
-             className={`btn ${activeModelKey === 'best' ? 'btn-primary' : 'btn-outline'}`}
-             onClick={() => setActiveModelKey('best')}
-             style={{padding: '0.5rem 1rem'}}
-           >
-             Aggressive Model
-           </button>
-        )}
-
-        {!models['best'] ? (
-          <button 
-            className="btn" 
-            style={{backgroundColor: '#dcfce7', color: '#166534', padding: '0.5rem 1rem'}}
-            onClick={() => addScenario('best')}
-          >
-            + Add Aggressive Model
-          </button>
-        ) : !models['worst'] ? (
-          <button 
-            className="btn" 
-            style={{backgroundColor: '#fef08a', color: '#854d0e', padding: '0.5rem 1rem'}}
-            onClick={() => addScenario('worst')}
-          >
-            + Add Defensive Model
-          </button>
-        ) : (
-          <button 
-             className={`btn ${activeModelKey === 'worst' ? 'btn-primary' : 'btn-outline'}`}
-             onClick={() => setActiveModelKey('worst')}
-             style={{padding: '0.5rem 1rem'}}
-           >
-             Defensive Model
-           </button>
-        )}
-      </div>
-      
-      <p style={{fontSize: '0.85rem', color: '#64748b', marginBottom: '1rem'}}>
-        {isBaseLocked 
-          ? "Base model is locked. You are viewing/editing a scenario." 
-          : "Complete your Business Model, then add Aggressive/Defensive models. Once added, the base model will be locked."}
-      </p>
-
       {/* Tabs */}
       <div className="tabs-container">
         {tabs.map(tab => (
