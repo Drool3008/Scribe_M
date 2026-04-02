@@ -20,11 +20,9 @@
   ],
   "setupComplete": true,
   "metric": "lakhs",
-  "activeScenario": "worst",
+  "activeScenario": "target",
   "enabledScenarios": [
-    "target",
-    "best",
-    "worst"
+    "target"
   ],
   "scenarios": {
     "target": {
@@ -34,11 +32,11 @@
         "type": "annual",
         "remark": "Solo doctor revenue assumes 70% monthly adoption in Year 1, gradually shifting toward 70% annual by Year 3. This transition increases discounted annual plan penetration, resulting in a blended ARPU decline from ₹40,461 in Year 1 to ₹38,335 in Year 3. Unit growth: 50 → 100 → 200 doctors with 20% churn and 18% expansion.",
         "y1Units": 50,
-        "y1Rate": 40461,
+        "y1Rate": 20240,
         "y2Units": 100,
-        "y2Rate": 39752,
+        "y2Rate": 39900,
         "y3Units": 200,
-        "y3Rate": 38335,
+        "y3Rate": 48660,
         "churnPercent": 20,
         "expansionPercent": 18,
         "purchasesPerYear": 1
@@ -164,10 +162,30 @@
           "y1": 0,
           "y2": 0,
           "y3": 0
+        },
+        "bu2": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        },
+        "bu3": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
         }
       },
       "payableDays": {
         "bu1": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        },
+        "bu2": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        },
+        "bu3": {
           "y1": 0,
           "y2": 0,
           "y3": 0
@@ -333,10 +351,30 @@
           "y1": 0,
           "y2": 0,
           "y3": 0
+        },
+        "bu2": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        },
+        "bu3": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
         }
       },
       "payableDays": {
         "bu1": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        },
+        "bu2": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        },
+        "bu3": {
           "y1": 0,
           "y2": 0,
           "y3": 0
@@ -502,10 +540,30 @@
           "y1": 0,
           "y2": 0,
           "y3": 0
+        },
+        "bu2": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        },
+        "bu3": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
         }
       },
       "payableDays": {
         "bu1": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        },
+        "bu2": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        },
+        "bu3": {
           "y1": 0,
           "y2": 0,
           "y3": 0

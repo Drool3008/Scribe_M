@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const SetupForm = ({ initialData, onStart }) => {
   const [data, setData] = useState(initialData);
@@ -22,6 +23,9 @@ const SetupForm = ({ initialData, onStart }) => {
 
   return (
     <div className="card">
+      <Link to="/" style={{color: '#6366f1', textDecoration: 'none', fontSize: '0.9rem', marginBottom: '1rem', display: 'inline-block'}}>
+        ← Back to Portal
+      </Link>
       <h2 style={{color: 'var(--primary)'}}>Business Plan Setup</h2>
       <p style={{marginBottom: '2rem'}}>IIITH SGSS Course Project</p>
 

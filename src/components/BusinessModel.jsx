@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import ProfitAndLoss from './tabs/ProfitAndLoss';
 import BalanceSheet from './tabs/BalanceSheet';
 import CashFlow from './tabs/CashFlow';
@@ -7,7 +8,7 @@ import Overheads from './tabs/Overheads';
 import FundingWC from './tabs/FundingWC';
 import { useModel } from '../context/ModelContext';
 
-const Dashboard = ({ projectData }) => {
+const BusinessModel = ({ projectData }) => {
   const [activeTab, setActiveTab] = useState('P&L');
   const fileInputRef = useRef(null);
   
@@ -75,11 +76,15 @@ const Dashboard = ({ projectData }) => {
 
   return (
     <div className="dashboard-container">
+      {/* Back to Portal Link */}
+      <Link to="/" style={{color: '#6366f1', textDecoration: 'none', fontSize: '0.9rem', marginBottom: '0.5rem', display: 'inline-block'}}>
+        ← Back to Portal
+      </Link>
+
       {/* Top Header Actions */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', flexWrap: 'wrap', gap: '1rem' }}>
         <div>
-          <h2 style={{color: '#6366f1', fontSize: '2rem', marginBottom: '0.2rem'}}>{projectData.name || 'My Replicated Startup'}</h2>
-          <p>Team: {projectData.members.map(m => `${m.name} (${m.regNo})`).join(', ')}</p>
+          <h2 style={{color: '#6366f1', fontSize: '2rem', marginBottom: '0.2rem'}}>{projectData.name || 'ScribeHealth'}</h2>
           <p style={{fontSize: '0.8rem', marginTop: '0.5rem', color: '#94a3b8'}}>
             💾 Auto-saved | ₹ Indian Rupees | Amounts in {projectData.displayMetric} | 🔗 = Linked field | Tab/Enter = Next cell
           </p>
@@ -174,4 +179,4 @@ const Dashboard = ({ projectData }) => {
   );
 };
 
-export default Dashboard;
+export default BusinessModel;
