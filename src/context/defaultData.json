@@ -1,0 +1,539 @@
+{
+  "projectName": "Scribehealth",
+  "teamMembers": [
+    {
+      "name": "Keshav Dubey",
+      "regNo": "0001"
+    },
+    {
+      "name": "Dhawal",
+      "regNo": "0002"
+    },
+    {
+      "name": "Aasritha Kalluri",
+      "regNo": "0003"
+    },
+    {
+      "name": "Gargi Saini",
+      "regNo": "0004"
+    }
+  ],
+  "setupComplete": true,
+  "metric": "lakhs",
+  "activeScenario": "worst",
+  "enabledScenarios": [
+    "target",
+    "best",
+    "worst"
+  ],
+  "scenarios": {
+    "target": {
+      "unit1Name": "Solo Doctors",
+      "unit1Revenue": {
+        "name": "Blended Subscription Revenue Model",
+        "type": "annual",
+        "remark": "Solo doctor revenue assumes 70% monthly adoption in Year 1, gradually shifting toward 70% annual by Year 3. This transition increases discounted annual plan penetration, resulting in a blended ARPU decline from ₹40,461 in Year 1 to ₹38,335 in Year 3. Unit growth: 50 → 100 → 200 doctors with 20% churn and 18% expansion.",
+        "y1Units": 50,
+        "y1Rate": 40461,
+        "y2Units": 100,
+        "y2Rate": 39752,
+        "y3Units": 200,
+        "y3Rate": 38335,
+        "churnPercent": 20,
+        "expansionPercent": 18,
+        "purchasesPerYear": 1
+      },
+      "unit1CogsItems": [
+        {
+          "id": 1,
+          "name": "Variable AI Cost + Platform Infra",
+          "type": "fixed",
+          "remark": "Per doctor delivery cost remains constant at ₹17,851/year throughout all three years, covering STT (₹2,800), LLM inference (₹800), and platform infrastructure with 20% overhead.",
+          "linkMode": "linked",
+          "linkSource": "bu1-revenue",
+          "linkField": "units",
+          "y1Units": 0,
+          "y1Rate": 17851,
+          "y2Units": 0,
+          "y2Rate": 17851,
+          "y3Units": 0,
+          "y3Rate": 17851
+        }
+      ],
+      "unit1CacItems": [
+        {
+          "id": 1,
+          "name": "Customer Acquisition Cost",
+          "type": "fixed",
+          "remark": "CAC declines from ₹17,400 in Year 1 to ₹4,350 in Year 3 as conversion improves (5% → 15%), referral momentum builds, and acquisition efficiency increases while maintaining relatively stable total marketing spend.",
+          "linkMode": "linked",
+          "linkSource": "bu1-revenue",
+          "linkField": "units",
+          "y1Units": 0,
+          "y1Rate": 17400,
+          "y2Units": 0,
+          "y2Rate": 6960,
+          "y3Units": 0,
+          "y3Rate": 4350
+        }
+      ],
+      "unit2Name": "BU2",
+      "unit2Revenue": {
+        "name": "NA",
+        "type": "lumpsum",
+        "remark": "",
+        "y1Units": 0,
+        "y1Rate": 0,
+        "y2Units": 0,
+        "y2Rate": 0,
+        "y3Units": 0,
+        "y3Rate": 0,
+        "churnPercent": 0,
+        "expansionPercent": 0,
+        "purchasesPerYear": 1
+      },
+      "unit2CogsItems": [],
+      "unit2CacItems": [],
+      "unit3Name": "BU3",
+      "unit3Revenue": {
+        "name": "NA",
+        "type": "lumpsum",
+        "remark": "",
+        "y1Units": 0,
+        "y1Rate": 0,
+        "y2Units": 0,
+        "y2Rate": 0,
+        "y3Units": 0,
+        "y3Rate": 0,
+        "churnPercent": 0,
+        "expansionPercent": 0,
+        "purchasesPerYear": 1
+      },
+      "unit3CogsItems": [],
+      "unit3CacItems": [],
+      "gaExpenseItems": [
+        {
+          "id": 1,
+          "name": "Core Team (Scaled Lean Model)",
+          "type": "fixed",
+          "remark": "Founders unpaid in Year 1. Year 2: 2 hires at ₹3.5L each (₹7L total). Year 3: same 2 hires at ₹6L each (₹12L total) as revenue scales to support higher compensation.",
+          "linkMode": "manual",
+          "linkField": "units",
+          "y1Units": 0,
+          "y1Rate": 0,
+          "y2Units": 2,
+          "y2Rate": 350000,
+          "y3Units": 2,
+          "y3Rate": 600000,
+          "linkSource": ""
+        },
+        {
+          "id": 2,
+          "name": "Accounting, Legal & Compliance",
+          "type": "fixed",
+          "remark": "Accounting, legal, and compliance costs: ₹2.8L (Y1) → ₹3L (Y2) → ₹4L (Y3). Includes statutory filings, tax compliance, IP protection, and governance requirements.",
+          "linkMode": "manual",
+          "linkField": "units",
+          "y1Units": 1,
+          "y1Rate": 280000,
+          "y2Units": 1,
+          "y2Rate": 300000,
+          "y3Units": 1,
+          "y3Rate": 400000,
+          "linkSource": ""
+        },
+        {
+          "id": 3,
+          "name": "Operations, Tools & Infrastructure",
+          "type": "fixed",
+          "remark": "Operations and infrastructure costs: ₹3.1L (Y1) → ₹4.25L (Y2) → ₹6.3L (Y3). Covers hosting, monitoring, security, tools, and operational buffer scaling with customer base.",
+          "linkMode": "manual",
+          "linkField": "units",
+          "y1Units": 1,
+          "y1Rate": 310000,
+          "y2Units": 1,
+          "y2Rate": 425000,
+          "y3Units": 1,
+          "y3Rate": 630000,
+          "linkSource": ""
+        }
+      ],
+      "investmentItems": [],
+      "receivableDays": {
+        "bu1": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        }
+      },
+      "payableDays": {
+        "bu1": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        }
+      },
+      "funding": {
+        "equityRaised": {
+          "y1": 2000000,
+          "y2": 0,
+          "y3": 0
+        },
+        "debtRaised": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        },
+        "interestRate": 0,
+        "debtRepayment": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        }
+      },
+      "openingPosition": {
+        "cash": 0,
+        "debt": 0
+      }
+    },
+    "best": {
+      "unit1Name": "Solo Doctors",
+      "unit1Revenue": {
+        "name": "Blended Subscription Revenue Model",
+        "type": "annual",
+        "remark": "Solo doctor revenue assumes 70% monthly adoption in Year 1, gradually shifting toward 70% annual by Year 3. This transition increases discounted annual plan penetration, resulting in a blended ARPU decline from ₹40,461 in Year 1 to ₹38,335 in Year 3. Aggressive unit growth: 70 → 160 → 340 doctors with 20% churn and 20% expansion.",
+        "y1Units": 70,
+        "y1Rate": 40461,
+        "y2Units": 160,
+        "y2Rate": 39752,
+        "y3Units": 340,
+        "y3Rate": 38335,
+        "churnPercent": 20,
+        "expansionPercent": 20,
+        "purchasesPerYear": 1
+      },
+      "unit1CogsItems": [
+        {
+          "id": 1,
+          "name": "Variable AI Cost + Platform Infra",
+          "type": "fixed",
+          "remark": "Per doctor delivery cost remains constant at ₹17,851/year throughout all three years, covering STT (₹2,800), LLM inference (₹800), and platform infrastructure with 20% overhead.",
+          "linkMode": "linked",
+          "linkSource": "bu1-revenue",
+          "linkField": "units",
+          "y1Units": 0,
+          "y1Rate": 17851,
+          "y2Units": 0,
+          "y2Rate": 17851,
+          "y3Units": 0,
+          "y3Rate": 17851
+        }
+      ],
+      "unit1CacItems": [
+        {
+          "id": 1,
+          "name": "Customer Acquisition Cost",
+          "type": "fixed",
+          "remark": "Aggressive CAC strategy: ₹20,000 (Y1) → ₹15,000 (Y2) → ₹10,000 (Y3). Higher initial spend to accelerate growth, improving efficiency through scale, brand recognition, and referral network effects.",
+          "linkMode": "linked",
+          "linkSource": "bu1-revenue",
+          "linkField": "units",
+          "y1Units": 0,
+          "y1Rate": 20000,
+          "y2Units": 0,
+          "y2Rate": 15000,
+          "y3Units": 0,
+          "y3Rate": 10000
+        }
+      ],
+      "unit2Name": "BU2",
+      "unit2Revenue": {
+        "name": "NA",
+        "type": "lumpsum",
+        "remark": "",
+        "y1Units": 0,
+        "y1Rate": 0,
+        "y2Units": 0,
+        "y2Rate": 0,
+        "y3Units": 0,
+        "y3Rate": 0,
+        "churnPercent": 0,
+        "expansionPercent": 0,
+        "purchasesPerYear": 1
+      },
+      "unit2CogsItems": [],
+      "unit2CacItems": [],
+      "unit3Name": "BU3",
+      "unit3Revenue": {
+        "name": "NA",
+        "type": "lumpsum",
+        "remark": "",
+        "y1Units": 0,
+        "y1Rate": 0,
+        "y2Units": 0,
+        "y2Rate": 0,
+        "y3Units": 0,
+        "y3Rate": 0,
+        "churnPercent": 0,
+        "expansionPercent": 0,
+        "purchasesPerYear": 1
+      },
+      "unit3CogsItems": [],
+      "unit3CacItems": [],
+      "gaExpenseItems": [
+        {
+          "id": 1,
+          "name": "Core Team (Scaled Lean Model)",
+          "type": "fixed",
+          "remark": "Founders unpaid in Year 1. Year 2: 2 hires at ₹5L each (₹10L total). Year 3: 3 hires at ₹7L each (₹21L total) to support aggressive growth trajectory.",
+          "linkMode": "manual",
+          "linkField": "units",
+          "y1Units": 0,
+          "y1Rate": 0,
+          "y2Units": 2,
+          "y2Rate": 500000,
+          "y3Units": 3,
+          "y3Rate": 700000,
+          "linkSource": ""
+        },
+        {
+          "id": 2,
+          "name": "Accounting, Legal & Compliance",
+          "type": "fixed",
+          "remark": "Accounting, legal, and compliance costs: ₹2.8L (Y1) → ₹3L (Y2) → ₹4L (Y3). Includes statutory filings, tax compliance, IP protection, and governance requirements.",
+          "linkMode": "manual",
+          "linkField": "units",
+          "y1Units": 1,
+          "y1Rate": 280000,
+          "y2Units": 1,
+          "y2Rate": 300000,
+          "y3Units": 1,
+          "y3Rate": 400000,
+          "linkSource": ""
+        },
+        {
+          "id": 3,
+          "name": "Operations, Tools & Infrastructure",
+          "type": "fixed",
+          "remark": "Operations and infrastructure costs: ₹3.1L (Y1) → ₹4.25L (Y2) → ₹6.3L (Y3). Covers hosting, monitoring, security, tools, and operational buffer scaling with customer base.",
+          "linkMode": "manual",
+          "linkField": "units",
+          "y1Units": 1,
+          "y1Rate": 310000,
+          "y2Units": 1,
+          "y2Rate": 425000,
+          "y3Units": 1,
+          "y3Rate": 630000,
+          "linkSource": ""
+        }
+      ],
+      "investmentItems": [],
+      "receivableDays": {
+        "bu1": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        }
+      },
+      "payableDays": {
+        "bu1": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        }
+      },
+      "funding": {
+        "equityRaised": {
+          "y1": 3000000,
+          "y2": 0,
+          "y3": 0
+        },
+        "debtRaised": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        },
+        "interestRate": 0,
+        "debtRepayment": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        }
+      },
+      "openingPosition": {
+        "cash": 0,
+        "debt": 0
+      }
+    },
+    "worst": {
+      "unit1Name": "Solo Doctors",
+      "unit1Revenue": {
+        "name": "Blended Subscription Revenue Model",
+        "type": "annual",
+        "remark": "Solo doctor revenue assumes 70% monthly adoption in Year 1, gradually shifting toward 70% annual by Year 3. This transition increases discounted annual plan penetration, resulting in a blended ARPU decline from ₹40,461 in Year 1 to ₹38,335 in Year 3. Conservative unit growth: 30 → 80 → 150 doctors with 20% churn and 12% expansion.",
+        "y1Units": 30,
+        "y1Rate": 40461,
+        "y2Units": 80,
+        "y2Rate": 39752,
+        "y3Units": 150,
+        "y3Rate": 38335,
+        "churnPercent": 20,
+        "expansionPercent": 12,
+        "purchasesPerYear": 1
+      },
+      "unit1CogsItems": [
+        {
+          "id": 1,
+          "name": "Variable AI Cost + Platform Infra",
+          "type": "fixed",
+          "remark": "Per doctor delivery cost remains constant at ₹17,851/year throughout all three years, covering STT (₹2,800), LLM inference (₹800), and platform infrastructure with 20% overhead.",
+          "linkMode": "linked",
+          "linkSource": "bu1-revenue",
+          "linkField": "units",
+          "y1Units": 0,
+          "y1Rate": 17851,
+          "y2Units": 0,
+          "y2Rate": 17851,
+          "y3Units": 0,
+          "y3Rate": 17851
+        }
+      ],
+      "unit1CacItems": [
+        {
+          "id": 1,
+          "name": "Customer Acquisition Cost",
+          "type": "fixed",
+          "remark": "Conservative CAC approach: ₹14,000 (Y1) → ₹13,000 (Y2) → ₹12,000 (Y3). Lower spend focused on selective channels and organic growth, with minimal efficiency improvement as referral network builds slowly.",
+          "linkMode": "linked",
+          "linkSource": "bu1-revenue",
+          "linkField": "units",
+          "y1Units": 0,
+          "y1Rate": 14000,
+          "y2Units": 0,
+          "y2Rate": 13000,
+          "y3Units": 0,
+          "y3Rate": 12000
+        }
+      ],
+      "unit2Name": "BU2",
+      "unit2Revenue": {
+        "name": "NA",
+        "type": "lumpsum",
+        "remark": "",
+        "y1Units": 0,
+        "y1Rate": 0,
+        "y2Units": 0,
+        "y2Rate": 0,
+        "y3Units": 0,
+        "y3Rate": 0,
+        "churnPercent": 0,
+        "expansionPercent": 0,
+        "purchasesPerYear": 1
+      },
+      "unit2CogsItems": [],
+      "unit2CacItems": [],
+      "unit3Name": "BU3",
+      "unit3Revenue": {
+        "name": "NA",
+        "type": "lumpsum",
+        "remark": "",
+        "y1Units": 0,
+        "y1Rate": 0,
+        "y2Units": 0,
+        "y2Rate": 0,
+        "y3Units": 0,
+        "y3Rate": 0,
+        "churnPercent": 0,
+        "expansionPercent": 0,
+        "purchasesPerYear": 1
+      },
+      "unit3CogsItems": [],
+      "unit3CacItems": [],
+      "gaExpenseItems": [
+        {
+          "id": 1,
+          "name": "Core Team (Scaled Lean Model)",
+          "type": "fixed",
+          "remark": "Founders unpaid in Year 1. Year 2: 2 hires at ₹3L each (₹6L total). Year 3: same 2 hires at ₹5L each (₹10L total). Lean team structure to preserve runway.",
+          "linkMode": "manual",
+          "linkField": "units",
+          "y1Units": 0,
+          "y1Rate": 0,
+          "y2Units": 2,
+          "y2Rate": 300000,
+          "y3Units": 2,
+          "y3Rate": 500000,
+          "linkSource": ""
+        },
+        {
+          "id": 2,
+          "name": "Accounting, Legal & Compliance",
+          "type": "fixed",
+          "remark": "Accounting, legal, and compliance costs: ₹2.8L (Y1) → ₹3L (Y2) → ₹4L (Y3). Includes statutory filings, tax compliance, IP protection, and governance requirements.",
+          "linkMode": "manual",
+          "linkField": "units",
+          "y1Units": 1,
+          "y1Rate": 280000,
+          "y2Units": 1,
+          "y2Rate": 300000,
+          "y3Units": 1,
+          "y3Rate": 400000,
+          "linkSource": ""
+        },
+        {
+          "id": 3,
+          "name": "Operations, Tools & Infrastructure",
+          "type": "fixed",
+          "remark": "Operations and infrastructure costs: ₹3.1L (Y1) → ₹4.25L (Y2) → ₹6.3L (Y3). Covers hosting, monitoring, security, tools, and operational buffer scaling with customer base.",
+          "linkMode": "manual",
+          "linkField": "units",
+          "y1Units": 1,
+          "y1Rate": 310000,
+          "y2Units": 1,
+          "y2Rate": 425000,
+          "y3Units": 1,
+          "y3Rate": 630000,
+          "linkSource": ""
+        }
+      ],
+      "investmentItems": [],
+      "receivableDays": {
+        "bu1": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        }
+      },
+      "payableDays": {
+        "bu1": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        }
+      },
+      "funding": {
+        "equityRaised": {
+          "y1": 1500000,
+          "y2": 500000,
+          "y3": 0
+        },
+        "debtRaised": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        },
+        "interestRate": 0,
+        "debtRepayment": {
+          "y1": 0,
+          "y2": 0,
+          "y3": 0
+        }
+      },
+      "openingPosition": {
+        "cash": 0,
+        "debt": 0
+      }
+    }
+  },
+  "exportedAt": "2026-02-16T18:44:09.236Z"
+}
